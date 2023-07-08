@@ -1,5 +1,5 @@
 using UnityEngine;
-public class movement : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
     public GameObject playerBody;
     void FixedUpdate()
