@@ -11,6 +11,9 @@ public class PlayerBobing : MonoBehaviour
 
     void Update()
     {
+        if      (Input.GetAxisRaw("Horizontal") ==  1f) transform.localScale = new Vector3(-1f, 1f, 1f);
+        else if (Input.GetAxisRaw("Horizontal") == -1f) transform.localScale = new Vector3( 1f, 1f, 1f);
+        //Bobing animation
         if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)
         {
             if (transform.rotation.z * 180 > maxAngle) rotateDirection = -1f; //Checks if rotation limit is crossed
