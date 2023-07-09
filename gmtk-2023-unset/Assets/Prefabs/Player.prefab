@@ -31,7 +31,7 @@ Transform:
   - {fileID: 3842608330960401481}
   - {fileID: 2765321391645486306}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733684355561754812
 GameObject:
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0f9f52db2ee7a8894f91d8ffd2280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 5
   rb: {fileID: 6011116340597516443}
 --- !u!50 &6011116340597516443
 Rigidbody2D:
