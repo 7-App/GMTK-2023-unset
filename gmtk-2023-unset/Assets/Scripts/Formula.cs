@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Formula : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Formula : MonoBehaviour
 	public float partsNeaded;
 	private float partsRecived;
 	public float endX;
+	public string nextScene;
 
 	void Awake()
 	{
@@ -19,7 +21,7 @@ public class Formula : MonoBehaviour
 		if ((partsRecived < partsNeaded && transform.position.x > stopX) || partsRecived >= partsNeaded)
 		{
 			transform.position -= new Vector3(formulaSpeed * Time.deltaTime, 0f, 0f);
-			//if(transform.position.x < endX) TODO: End Level
+			if (transform.position.x < endX) SceneManager.LoadScene(nextScene);
 		}
 	}
     void OnCollisionEnter2D(Collision2D collision)
